@@ -12,8 +12,8 @@ strategy:
    imageName: "ubuntu-latest"
   mac:
    imageName: "macOS-latest"
-  windows:
-   imageName: "windows-latest"
+  # windows:
+  #  imageName: "windows-latest"
  maxParallel: 3  
 
 pool:
@@ -46,5 +46,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
-    artifact: 'drop-$(Build.BuildId)-$(Build.SourceBranchName)-$(Date:yyyyMMdd)'
+    artifact: 'drop-$(Build.BuildId)-$(Build.BuildNumber)-$(Build.SourceVersion)'
     publishLocation: 'pipeline'
