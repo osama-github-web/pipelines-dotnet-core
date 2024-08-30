@@ -46,5 +46,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
-    artifact: 'drop0$(Build.BuildId)'
+    artifact: 'drop-$(Build.BuildId)-$(Build.SourceBranchName)-$(Date:yyyyMMdd)'
     publishLocation: 'pipeline'
