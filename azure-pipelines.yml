@@ -9,11 +9,11 @@ trigger:
 strategy:
  matrix:
   linux: 
-   image-name: "ubuntu-latest"
+   imageName: "ubuntu-latest"
   mac:
-   image-name: "macOS-latest"
+   imageName: "macOS-latest"
   windows:
-   image-name: "windows-latest"
+   imageName: "windows-latest"
  maxParallel: 3  
 
 pool:
